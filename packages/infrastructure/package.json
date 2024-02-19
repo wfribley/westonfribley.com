@@ -1,0 +1,38 @@
+{
+  "name": "@wfribley/website-infrastructure",
+  "version": "0.0.1",
+  "description": "Infrastructure for a simple web application",
+  "author": "Weston Fribley <me@westonfribley.com>",
+  "homepage": "",
+  "license": "ISC",
+  "bin": {
+    "app": "bin/app.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "lint": "eslint .",
+    "cdk": "cdk"
+  },
+  "dependencies": {
+    "@wfribley/lambda-interceptors": "^0.0.1",
+    "@wfribley/website-frontend": "^0.0.1",
+    "monocdk": "^1.112.0",
+    "source-map-support": "^0.5.16"
+  },
+  "devDependencies": {
+    "@monocdk-experiment/assert": "^1.112.0",
+    "@types/jest": "^26.0.10",
+    "@types/node": "10.17.27",
+    "@typescript-eslint/eslint-plugin": "^4.28.2",
+    "@typescript-eslint/parser": "^4.28.2",
+    "aws-cdk": "1.112.0",
+    "eslint": "^7.30.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "jest": "^26.4.2",
+    "ts-jest": "^26.2.0",
+    "ts-node": "^9.0.0",
+    "typescript": "~3.9.7"
+  }
+}
