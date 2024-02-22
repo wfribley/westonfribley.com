@@ -1,38 +1,32 @@
 {
-  "name": "@wfribley/website-infrastructure",
+  "name": "@wfribley/westonfribleycom-infrastructure",
   "version": "0.0.1",
-  "description": "Infrastructure for a simple web application",
+  "description": "AWS infrastructure for westonfribley.com",
   "author": "Weston Fribley <me@westonfribley.com>",
   "homepage": "",
-  "license": "ISC",
+  "license": "MIT",
   "bin": {
-    "app": "bin/app.js"
+    "infrastructure": "bin/infrastructure.js"
   },
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "lint": "eslint .",
     "cdk": "cdk"
   },
-  "dependencies": {
-    "@wfribley/lambda-interceptors": "^0.0.1",
-    "@wfribley/website-frontend": "^0.0.1",
-    "monocdk": "^1.112.0",
-    "source-map-support": "^0.5.16"
-  },
   "devDependencies": {
-    "@monocdk-experiment/assert": "^1.112.0",
-    "@types/jest": "^26.0.10",
-    "@types/node": "10.17.27",
-    "@typescript-eslint/eslint-plugin": "^4.28.2",
-    "@typescript-eslint/parser": "^4.28.2",
-    "aws-cdk": "1.112.0",
-    "eslint": "^7.30.0",
-    "eslint-plugin-simple-import-sort": "^7.0.0",
-    "jest": "^26.4.2",
-    "ts-jest": "^26.2.0",
-    "ts-node": "^9.0.0",
-    "typescript": "~3.9.7"
+    "@types/jest": "^29.5.12",
+    "@types/node": "20.11.16",
+    "aws-cdk": "2.128.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.3.3"
+  },
+  "dependencies": {
+    "@wfribley/westonfribleycom-frontend": "^0.0.1",
+    "aws-cdk-lib": "2.128.0",
+    "constructs": "^10.0.0",
+    "source-map-support": "^0.5.21"
   }
 }

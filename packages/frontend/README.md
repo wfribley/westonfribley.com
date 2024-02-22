@@ -1,4 +1,4 @@
-# `@wfribley/website-frontend`
+# `@wfribley/westonfribleycom-frontend`
 
 > TODO: description
 

@@ -1,10 +1,10 @@
 {
-  "name": "@wfribley/website-frontend",
+  "name": "@wfribley/westonfribleycom-frontend",
   "version": "0.0.1",
-  "description": "Front-end code for a simple web application",
+  "description": "Front-end code for westonfribley.com",
   "author": "Weston Fribley <me@westonfribley.com>",
   "homepage": "",
-  "license": "ISC",
+  "license": "MIT",
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   }
