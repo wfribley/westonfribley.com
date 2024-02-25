@@ -1,6 +1,7 @@
 {
   "name": "@wfribley/westonfribleycom-infrastructure",
   "version": "0.0.1",
+  "private": true,
   "description": "AWS infrastructure for westonfribley.com",
   "author": "Weston Fribley <me@westonfribley.com>",
   "homepage": "",

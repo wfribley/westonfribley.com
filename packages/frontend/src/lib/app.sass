@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900')
+
+$font-color: black
+$callout-color: #ff7525
+
+$desktop-page-width: 820px
+$mobile-page-width: 431px
+
+.octicon
+    display: inline-block
+    vertical-align: text-top
+    fill: currentColor
+    overflow: visible
+
+@mixin block($shrink: false, $direction: row)
+    display: flex
+    flex-direction: $direction
+    @if $shrink
+        flex: 0 0 auto
+    @else
+        flex: 1 1 auto
+
+//
+// typography
+//
+html
+    color: $font-color
+    font-family: 'Rubik', sans-serif
+    font-size: 16px
+    font-weight: 400
+    line-height: 1.15
+
+h1
+    font-size: 2.5rem
+    font-weight: 700
+
+h2, h3, h4
+    font-weight: 500
+
+a
+    color: $font-color
+    cursor: pointer
+    text-decoration: none
+
+figure
+    display: inline-block
+    margin: 0
+    color: $font-color
+    text-align: center
+
+a, figure
+    transition: color 0.15s ease-out
+
+figcaption
+    color: $callout-color
+
+a:hover, figure:hover, .callout
+    color: $callout-color
+    figure
+        color: $callout-color
+
+//
+// content layout
+//
+body
+    +block($direction: column)
+    height: 100vh
+    width: 100vw
+    margin: 0
+    align-items: center
+
+header, main, section
+    +block
+    width: $desktop-page-width
+    margin: 0.5rem 1rem
+
+    section
+        width: auto
+        margin: 0
+
+header
+    > section, > aside
+        align-items: flex-end
+
+main
+    display: block
+
+aside, footer
+    +block($shrink: true, $direction: row-reverse)
+
+aside
+    transform: translateY(31px)
+
+    figcaption
+        margin-top: 0.5rem
+
+hr, footer
+    display: block
+    width: 100%
+
+footer
+    margin: 1rem
+    text-align: center
+
+    figcaption
+        display: none
+
+small
+    font-size: 80%
+
+//
+// content styling
+//
+header
+    h1
+        margin: 0
+    a
+        margin: 0 1rem
+        &:last-child
+            margin-right: 0
+
+hr
+    margin: 0
+    border: none
+    border-top: 2px solid $font-color
+
+main h2
+    margin-top: 0
+
+//
+// mobile
+//
+@media screen and (max-device-width: $mobile-page-width)
+    body
+        align-items: stretch
+
+    header, footer, main, section
+        width: auto
+
+        section
+            width: auto
+            margin: 0
+
+    header
+        margin-top: 1rem
+
+@media screen and (max-device-width: $mobile-page-width) and (orientation: portrait)
+  header
+    flex-direction: column-reverse
+
+    > aside
+        justify-content: space-between
+        transform: none
+
+        a
+            flex: 0 0 auto
+            margin: 0
+
+//
+// tablet
+//
+@media screen and (max-device-width: $desktop-page-width) and (min-device-width: $mobile-page-width)
+    header, footer, main, section
+        width: $mobile-page-width

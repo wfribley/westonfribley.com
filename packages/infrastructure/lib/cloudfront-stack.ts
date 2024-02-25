@@ -16,7 +16,7 @@ import { HostedZoneStack } from "./hosted-zone-stack";
 
 export interface CloudFrontStackProps extends StackProps {
     frontendAssetDirectory?: string,
-    hostedZone?: HostedZoneStack
+    hostedZone?: HostedZoneStack,
 }
 
 export class CloudFrontStack extends Stack {
